@@ -22,7 +22,23 @@
 </head>
 <body>
 
-  <p>:)</p>
+	<canvas id="lifeSkills"></canvas>
+	<script type="text/javascript">
+		d3.csv("LifeSkills.csv").then(function(data) {
+		var csv_data = data;
+		var ctx = document.getElementById('lifeSkills').getContext('2d');
+		var lifeSkillsChart = new Chart(ctx, {
+			type: 'bubble',
+			data: {
+				labels: csv_data['PIN'],
+				datasets: [{
+					label: 'Total Life Skills Spend',
+					data: {x: csv['TOTAL_LIFE_SKILLS_SPEND'], y: csv['TOTAL_ADT_FACILITY_SPEND']}
+				}];
+			}
+		});
+		});
+	</script>
 	
 </body>
 </html>
