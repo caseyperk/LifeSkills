@@ -35,6 +35,21 @@
 					label: 'Total Life Skills Spend',
 					data: {x: csv['TOTAL_LIFE_SKILLS_SPEND'], y: csv['TOTAL_ADT_FACILITY_SPEND']}
 				}];
+			},
+			options: {
+				responsive: true,
+				title: {
+					display: true,
+					position: 'top',
+					text: "Life Skills Clients' Spending",
+					fontSize: 18,
+					fontColor: '#111'
+				},
+				tooltips: {
+					enabled: true,
+					mode: 'single',
+					
+				}
 			}
 		});
 		});
